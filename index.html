@@ -4,17 +4,23 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
-    <title>Angle between two dots</title>
+    <title>Trigonometry</title>
   </head>
   <body>
     <header>
       <div id="caption"></div>
       <div id="arrow"></div>
+      <div id="controls">
+        <label><input type="checkbox" checked name="distance" /> Distance</label><br />
+        <label><input type="checkbox" name="circles" /> Circles</label><br />
+        <label><input type="checkbox" name="triangles" /> Triangles</label><br />
+        <input id="angle" type="range" min="-180" max="180" value="90">
+        <input id="multiply" type="number" min="1" max="10" value="1">
+      </div>
     </header>
     <main>
       <div id="point-a" class="point select"></div>
       <div id="point-b" class="point"></div>
-      <svg id="line"><line></line></svg>
       <div id="distance-caption"></div>
       <div class="grid"></div>
     </main>
@@ -24,7 +30,7 @@
           <br> by <a href="https://github.com/VladimirMerk" target="_blank">VladimirMerk</a>
       </div>
     </footer>
-
+    <canvas id="main-canvas" ></canvas>
     <script src="./js/app.js"></script>
   </body>
 </html>

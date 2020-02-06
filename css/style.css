@@ -1,3 +1,12 @@
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 html,
 body,
 main,
@@ -18,6 +27,11 @@ a:visited {
 a:focus,
 a:hover {
   color: #dc7e91;
+}
+
+header {
+  position: relative;
+  z-index: 1;
 }
 
 .grid {
@@ -81,7 +95,8 @@ a:hover {
 }
 
 #caption,
-#distance-caption {
+#distance-caption,
+#controls {
   position: absolute;
   left: 20px;
   top: 20px;
@@ -92,6 +107,8 @@ a:hover {
 
 #distance-caption {
   border: 1px solid #ccc;
+  z-index: 1;
+  margin-top: -15px;
 }
 
 #arrow {
@@ -105,6 +122,11 @@ a:hover {
   z-index: 1;
 }
 
+#controls {
+  left: 20px;
+  top: 80px;
+}
+
 #credit {
   position: absolute;
   left: 20px;
@@ -113,4 +135,14 @@ a:hover {
   color: #b9b9b9;
   border: 1px solid #ccc;
   background-color: #fff;
+  z-index: 1;
+}
+
+#main-canvas {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
