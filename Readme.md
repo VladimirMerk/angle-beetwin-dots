@@ -1,11 +1,11 @@
-# Angle and distance between two points
+# Calculations between two points
 
 Demonstration of calculating:
 
-* an angle
+* An angle
 
-* a distance between two points
+* A distance between points
 
-* building a wavy bezier curve between two points
+* Create a wavy bezier curve between the points
 
 [demo https://codepen.io/VMerk/pen/povQdra](https://codepen.io/VMerk/pen/povQdra)

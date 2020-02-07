@@ -40,16 +40,9 @@
     drawIntermediatePoints();
     makeBezier();
 
-    const options = Array.from(checkboxes).map(checkbox => {
-      return {
-        'name': checkbox.name,
-        'enable': checkbox.checked
-      };
-    });
-
+    const options = getOptions();
     for (const option of options) {
       if (!option.enable) continue;
-      console.log('option.name', option.name)
       switch (option.name) {
         case 'distance':
           drawMidpointCaption();
@@ -63,14 +56,23 @@
       }
     }
 
-    if (! dragMode) return;
-
-    moveSelectedPointElement(e.pageX, e.pageY);
+    if (dragMode) {
+      moveSelectedPointElement(e.pageX, e.pageY);
+    }
   }
 
   function onUp(e) {
     disableDragMode();
     unselectAllPointElements();
+  }
+
+  function getOptions() {
+    return Array.from(checkboxes).map(checkbox => {
+      return {
+        'name': checkbox.name,
+        'enable': checkbox.checked
+      };
+    });
   }
 
   function selectPointElement(selectedPointElement) {
